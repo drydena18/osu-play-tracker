@@ -1,0 +1,22 @@
+# Secrets: never commit
+.env
+tokens/
+
+# Personal data and caches
+osu_scores.db
+osu_scores.db-journal
+osu_files/
+charts/
+*.csv
+
+# Python
+.venv/
+venv/
+__pychache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Editor
+.DS_Store
+.idea/
+.vscode/
