@@ -52,7 +52,7 @@ def parse_mods(mods) -> frozenset:
     if isinstance(mods, (set, frozenset, list, tuple)):
         items = [str(m).upper() for m in mods]
     else:
-        s = str(mods).upper().replacer(" ", "")
+        s = str(mods).upper().replace(" ", "")
         if not s or s in ("NM", "NOMOD"):
             return frozenset()
         items = s.split(",") if "," in s else re.findall(r"[A-Z0-9]{2}", s)

@@ -75,7 +75,7 @@ class PPEngine:
     def beatmap(self, beatmap_id: int):
         bid = int(beatmap_id)
         if bid not in self._maps:
-            path = ensure_map_file(bid, self.downlaod, self.delay)
+            path = ensure_map_file(bid, self.download, self.delay)
             try:
                 self._maps[bid] = rosu.Beatmap(path = path)
             except Exception as exc:
